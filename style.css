@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+.tabs {
+    width: 850px;
+}
+
+
+.tabs > input {
+    display: none;
+}
+
+
+.tabs-nav {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #ecc13f;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.tabs-nav label {
+    padding: 15px 22px;
+    font-size: 21px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.tabs-nav label:hover {
+    background: #ecc13f;
+}
+
+
+#tab1:checked ~ .tabs-nav .label-1,
+#tab2:checked ~ .tabs-nav .label-2,
+#tab3:checked ~ .tabs-nav .label-3 {
+    background: #e8893c;
+}
+
+
+.tabs-content {
+    background: #ecc13f;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+#tab1:checked ~ .tabs-content .content-1 {
+    display: flex;
+}
+
+#tab2:checked ~ .tabs-content .content-2 {
+    display: flex;
+}
+
+#tab3:checked ~ .tabs-content .content-3 {
+    display: flex;
+}
+
+.tab-content img {
+    width: 390px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.text h2 {
+    margin: 0 0 20px;
+    font-size: 36px;
+}
+
+.text p {
+    font-size: 24px;
+}
+
+.text{
+    padding-left: 20px;
+}
